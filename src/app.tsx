@@ -10,7 +10,9 @@ app.get("/", (c) => {
 
   return c.html(
     <BaseLayout>
-      <InstagramFeed accessToken={INSTAGRAM_ACCESS_TOKEN} />
+      <div style="padding: 1rem;">
+        <InstagramFeed accessToken={INSTAGRAM_ACCESS_TOKEN} />
+      </div>
     </BaseLayout>,
   );
 });

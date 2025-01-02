@@ -2,9 +2,34 @@ import { css } from "hono/css";
 import InstagramFeedItem from "./InstagramFeedItem.tsx";
 
 const componentStyles = css`
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  gap: 1rem;
+  --gap: 1rem;
+  --roundness: 13px;
+
+  container-type: inline-size;
+
+  .holder {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--gap);
+  }
+
+  @container ( 540px <= width < 768px ) {
+    .holder { 
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  @container ( 768px <= width < 1280px ) {
+    .holder { 
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+
+  @container (1280px <= width) {
+    .holder { 
+      grid-template-columns: repeat(6, 1fr);
+    }
+  }
 `;
 
 type Props = {
@@ -21,17 +46,15 @@ export default async function ({ accessToken }: Props) {
 
   const data = await res.json();
 
-  console.log(data);
+  // console.log(data);
 
   return (
-    <div style="padding:1rem">
-      <div class={componentStyles}>
+    <div class={componentStyles}>
+      <div class="holder">
         {data.media.data.map((media: any) => (
           <InstagramFeedItem media={media} />
         ))}
       </div>
-      <hr/>
-      <pre style="font-size:11px;overflow-x:auto;">{JSON.stringify(data,null,"  ")}</pre>
     </div>
   );
 }
