@@ -1,31 +1,8 @@
 import { css } from "hono/css";
-// import InstagramFeedItem from "./InstagramFeedItem.tsx";
-
-export type Media = {
-  id: string,
-  permalink: string,
-  like_count: number,
-  comments_count: number,
-  caption: string,
-  media_type: "CAROUSEL_ALBUM" | "IMAGE" | "VIDEO",
-  media_product_type: "AD" | "FEED" | "STORY" | "REELS",
-  media_url: string,
-  thumbnail_url?: string,
-  timestamp: string,
-  children: {
-    data: {
-      id: string,
-      media_type: "CAROUSEL_ALBUM" | "IMAGE" | "VIDEO",
-      media_url: string,
-      thumbnail_url?: string,
-      timestamp: string,
-    }[]
-  },
-
-}
+import { InstagramMedia } from "../types.ts";
 
 type Props = {
-  media: Media;
+  media: InstagramMedia;
 };
 
 export default function ({ media }: Props) {
