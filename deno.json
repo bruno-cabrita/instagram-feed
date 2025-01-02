@@ -1,0 +1,14 @@
+{
+  "tasks": {
+    "dev": "deno run -NER --watch server.ts",
+    "serve": "deno run -NER server.ts"
+  },
+  "imports": {
+    "dotenv": "jsr:@std/dotenv@^0.225.3",
+    "hono": "jsr:@hono/hono@^4.6.15"
+  },
+  "compilerOptions": {
+    "jsx": "precompile",
+    "jsxImportSource": "hono/jsx"
+  }
+}
