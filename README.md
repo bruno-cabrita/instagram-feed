@@ -1,6 +1,8 @@
 # Instagram Feed
 
-Instagram feed using [Hono](https://hono.dev) and [Deno](https://deno.com) (easily migrable to node).
+> 🚧 Work in progress
+
+Instagram feed using [Hono](https://hono.dev) and [Deno](https://deno.com) (easily migrable to React and Node).
 
 ## Getting Started
 
