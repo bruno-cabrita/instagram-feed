@@ -2,7 +2,7 @@
 
 > 🚧 Work in progress
 
-Instagram feed using [Hono](https://hono.dev) and [Deno](https://deno.com) (easily migrable to React and Node).
+Instagram feed using [Hono](https://hono.dev) and [Deno](https://deno.com).
 
 ## Getting Started
 

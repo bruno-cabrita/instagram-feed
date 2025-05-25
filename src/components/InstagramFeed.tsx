@@ -45,7 +45,10 @@ export default async function ({ accessToken }: Props) {
     `https://graph.instagram.com/me?access_token=${accessToken}&fields=username,account_type,website,name,followers_count,media_count,biography,profile_picture_url,media.limit(${mediaLimit}){caption,media_type,media_product_type,media_url,permalink,thumbnail_url,timestamp,children{media_url,media_type,thumbnail_url},like_count,comments_count}`,
   );
 
-  if(!res.ok) return "Error fetching data.";
+  if(!res.ok){
+    console.error(await res.json())
+    return "Error fetching data.";
+  }
 
   const data: InstagramAPIResponse = await res.json();
 

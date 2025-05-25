@@ -1,21 +1,21 @@
 {
-  "version": "4",
+  "version": "5",
   "specifiers": {
-    "jsr:@hono/hono@^4.6.15": "4.6.15",
-    "jsr:@std/dotenv@~0.225.3": "0.225.3"
+    "jsr:@hono/hono@^4.7.10": "4.7.10",
+    "jsr:@std/dotenv@~0.225.4": "0.225.4"
   },
   "jsr": {
-    "@hono/hono@4.6.15": {
-      "integrity": "935b3b12e98e4b22bcd1aa4dbe6587321e431c79829eba61f535b4ede39fd8b1"
+    "@hono/hono@4.7.10": {
+      "integrity": "e59029e252af371abe43e8e4f9a115e38974c6bd5972022372bf89f763269cc7"
     },
-    "@std/dotenv@0.225.3": {
-      "integrity": "a95e5b812c27b0854c52acbae215856d9cce9d4bbf774d938c51d212711e8d4a"
+    "@std/dotenv@0.225.4": {
+      "integrity": "2a672c2b192abe535dcfea1ae89f219ee3979af6aad7d185cb19206ee9bc5caf"
     }
   },
   "workspace": {
     "dependencies": [
-      "jsr:@hono/hono@^4.6.15",
-      "jsr:@std/dotenv@~0.225.3"
+      "jsr:@hono/hono@^4.7.10",
+      "jsr:@std/dotenv@~0.225.4"
     ]
   }
 }
